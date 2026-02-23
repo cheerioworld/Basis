@@ -1,3 +1,4 @@
+#if false
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
@@ -52,3 +53,4 @@ public class BasisAvatarMonoBehaviourEditor : Editor
         root.Add(messageField);
     }
 }
+#endif
