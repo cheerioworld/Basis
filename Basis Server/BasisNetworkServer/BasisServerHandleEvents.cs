@@ -1,5 +1,4 @@
 using Basis.Network.Core;
-using Basis.Network.Core.Compression;
 using Basis.Network.Server.Generic;
 using Basis.Network.Server.Ownership;
 using BasisNetworkCore;
@@ -12,7 +11,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using static Basis.Network.Core.Compression.BasisAvatarBitPacking;
 using static Basis.Network.Core.Serializable.SerializableBasis;
 using static BasisNetworkCore.Serializable.SerializableBasis;
 using static SerializableBasis;
@@ -218,7 +216,6 @@ namespace BasisServerHandle
                     IncreaseRate = Config.BSRSIncreaseRate,
                     SlowestSendRate = Config.BSRSlowestSendRate,
                 };
-
                 NetDataWriter Writer = new NetDataWriter(true, 4);
                 ServerMetaDataMessage.Serialize(Writer);
                 NetworkServer.TrySend(newPeer, Writer, BasisNetworkCommons.metaDataChannel, DeliveryMethod.ReliableOrdered);
@@ -515,7 +512,14 @@ namespace BasisServerHandle
         public static void LoadResource(NetPacketReader Reader, NetPeer Peer)
         {
             LocalLoadResource LocalLoadResource = new LocalLoadResource();
+
+            if (NetworkServer.AuthIdentity.NetIDToUUID(Peer, out string uuid) == false)
+            {
+                BNL.LogError($"User UUID not found for peer: {Peer}");
+                return;
+            }
             LocalLoadResource.Deserialize(Reader);
+            LocalLoadResource.IsAdminLocked = NetworkServer.AuthIdentity.IsNetPeerAdmin(uuid);
             Reader.Recycle();
             //returns a message with the ushort back to the client, or it sends it to everyone if its new.
             BasisNetworkResourceManagement.LoadResource(LocalLoadResource);
@@ -527,7 +531,7 @@ namespace BasisServerHandle
             UnLoadResource.Deserialize(Reader);
             Reader.Recycle();
             //returns a message with the ushort back to the client, or it sends it to everyone if its new.
-            BasisNetworkResourceManagement.UnloadResource(UnLoadResource);
+            BasisNetworkResourceManagement.UnloadResource(UnLoadResource, Peer);
             //we need to convert the string int a  ushort.
         }
         #endregion

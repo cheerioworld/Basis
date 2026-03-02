@@ -238,49 +238,49 @@ MonoBehaviour:
         Color: {r: 0, g: 0, b: 0, a: 0}
         PaletteStyle: 5
         Type: 0
-      Font: {fileID: 11400000, guid: d5e3db51eb660a74bacffd52668552f1, type: 2}
+      Font: {fileID: 11400000, guid: 3961345727a7615428c1b1bf4345430a, type: 2}
       FontSize: 30
     - Title: Subtitle
       Color:
         Color: {r: 0, g: 0, b: 0, a: 0}
         PaletteStyle: 6
         Type: 0
-      Font: {fileID: 11400000, guid: d5e3db51eb660a74bacffd52668552f1, type: 2}
+      Font: {fileID: 11400000, guid: 3961345727a7615428c1b1bf4345430a, type: 2}
       FontSize: 22
     - Title: Subtitle Danger
       Color:
         Color: {r: 0, g: 0, b: 0, a: 0}
         PaletteStyle: 15
         Type: 0
-      Font: {fileID: 11400000, guid: d5e3db51eb660a74bacffd52668552f1, type: 2}
+      Font: {fileID: 11400000, guid: 3961345727a7615428c1b1bf4345430a, type: 2}
       FontSize: 22
     - Title: Button Label
       Color:
         Color: {r: 0, g: 0, b: 0, a: 0}
         PaletteStyle: 5
         Type: 0
-      Font: {fileID: 11400000, guid: d5e3db51eb660a74bacffd52668552f1, type: 2}
+      Font: {fileID: 11400000, guid: 3961345727a7615428c1b1bf4345430a, type: 2}
       FontSize: 26
     - Title: Selection Label
       Color:
         Color: {r: 0, g: 0, b: 0, a: 0}
         PaletteStyle: 6
         Type: 0
-      Font: {fileID: 11400000, guid: d5e3db51eb660a74bacffd52668552f1, type: 2}
+      Font: {fileID: 11400000, guid: 3961345727a7615428c1b1bf4345430a, type: 2}
       FontSize: 24
     - Title: Element Header
       Color:
         Color: {r: 0, g: 0, b: 0, a: 0}
         PaletteStyle: 5
         Type: 0
-      Font: {fileID: 11400000, guid: d5e3db51eb660a74bacffd52668552f1, type: 2}
+      Font: {fileID: 11400000, guid: 3961345727a7615428c1b1bf4345430a, type: 2}
       FontSize: 26
     - Title: Element Subtitle
       Color:
         Color: {r: 0, g: 0, b: 0, a: 0}
         PaletteStyle: 6
         Type: 0
-      Font: {fileID: 11400000, guid: d5e3db51eb660a74bacffd52668552f1, type: 2}
+      Font: {fileID: 11400000, guid: 3961345727a7615428c1b1bf4345430a, type: 2}
       FontSize: 20
   SelectableStyles:
     Styles:

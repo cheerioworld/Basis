@@ -79,7 +79,7 @@ public abstract class BasisHandHeldCameraInteractable : BasisPickupInteractable
     private Quaternion cameraStartingLocalRot;
 
     // Modes / orientation
-    private CameraOrientation currentOrientation = CameraOrientation.Landscape;
+    private BasisCameraOrientation currentOrientation = BasisCameraOrientation.Landscape;
     private float orientationCheckCooldown = 0f;
 
     [SerializeReference] private BasisParentConstraint cameraPinConstraint;
@@ -158,7 +158,7 @@ public abstract class BasisHandHeldCameraInteractable : BasisPickupInteractable
             HHC.captureCamera.transform.GetLocalPositionAndRotation(out cameraStartingLocalPos, out cameraStartingLocalRot);
         }
 
-        OnInteractStartEvent += OnInteractDesktopTweak;
+        OnInteractStartEvent.AddListener( OnInteractDesktopTweak );
         BasisDeviceManagement.OnBootModeChanged += OnBootModeChanged;
 
         BasisLocalPlayer.OnPlayersHeightChangedNextFrame += OnHeightChanged;
@@ -267,21 +267,21 @@ public abstract class BasisHandHeldCameraInteractable : BasisPickupInteractable
             int step = Mathf.RoundToInt(roll / 90f);
             step = Mathf.Clamp(step, -2, 2);
 
-            CameraOrientation newOrientation;
+            BasisCameraOrientation newOrientation;
             switch (step)
             {
                 case -2:
                 case 2:
-                    newOrientation = CameraOrientation.LandscapeFlipped; // upside-down
+                    newOrientation = BasisCameraOrientation.LandscapeFlipped; // upside-down
                     break;
                 case 1:
-                    newOrientation = CameraOrientation.PortraitCW;        // one portrait side
+                    newOrientation = BasisCameraOrientation.PortraitCW;        // one portrait side
                     break;
                 case -1:
-                    newOrientation = CameraOrientation.PortraitCCW;       // opposite portrait side
+                    newOrientation = BasisCameraOrientation.PortraitCCW;       // opposite portrait side
                     break;
                 default:
-                    newOrientation = CameraOrientation.Landscape;
+                    newOrientation = BasisCameraOrientation.Landscape;
                     break;
             }
 
@@ -295,7 +295,7 @@ public abstract class BasisHandHeldCameraInteractable : BasisPickupInteractable
     }
 
     /// <summary>Applies the new orientation to the UI and logs it.</summary>
-    private void HandleOrientationChanged(CameraOrientation newOrientation)
+    private void HandleOrientationChanged(BasisCameraOrientation newOrientation)
     {
         if (cameraUI != null)
         {
@@ -636,7 +636,7 @@ public abstract class BasisHandHeldCameraInteractable : BasisPickupInteractable
     public override void OnDestroy()
     {
         BasisDeviceManagement.OnBootModeChanged -= OnBootModeChanged;
-        OnInteractStartEvent -= OnInteractDesktopTweak;
+        OnInteractStartEvent.RemoveListener(OnInteractDesktopTweak);
         BasisLocalPlayer.OnPlayersHeightChangedNextFrame -= OnHeightChanged;
 
         BasisLocalPlayer.AfterSimulateOnLate.RemoveAction(202, UpdateCamera);

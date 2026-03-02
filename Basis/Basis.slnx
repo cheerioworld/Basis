@@ -15,6 +15,7 @@
   <Project Path="Unity.Collections.csproj" />
   <Project Path="UnityEngine.UI.csproj" />
   <Project Path="Unity.Addressables.Editor.csproj" />
+  <Project Path="Unity.MemoryProfiler.Editor.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.2D.Runtime.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
@@ -30,7 +31,6 @@
   <Project Path="Unity.VisualStudio.Editor.csproj" />
   <Project Path="Unity.Animation.Rigging.Editor.csproj" />
   <Project Path="Basis Framework.csproj" />
-  <Project Path="Unity.MemoryProfiler.Editor.csproj" />
   <Project Path="PPv2URPConverters.csproj" />
   <Project Path="SteamVR.csproj" />
   <Project Path="com.gator-dragon-games.jigglephysics.editor.csproj" />
@@ -44,6 +44,7 @@
   <Project Path="BasisSDKEditor.csproj" />
   <Project Path="com.gator-dragon-games.jigglephysics.csproj" />
   <Project Path="Unity.UnifiedRayTracing.Runtime.csproj" />
+  <Project Path="Prism.Runtime.csproj" />
   <Project Path="Unity.VisualEffectGraph.Runtime.csproj" />
   <Project Path="Unity.Services.Core.Editor.csproj" />
   <Project Path="Unity.Burst.CodeGen.csproj" />
@@ -60,6 +61,7 @@
   <Project Path="Unity.Burst.Editor.csproj" />
   <Project Path="BasisSDK.csproj" />
   <Project Path="Unity.Rider.Editor.csproj" />
+  <Project Path="Unity.AutoGroupGenerator.Editor.csproj" />
   <Project Path="Unity.SysrootPackage.Editor.csproj" />
   <Project Path="BasisCommon.csproj" />
   <Project Path="UnityEditor.UI.csproj" />
@@ -96,8 +98,10 @@
   <Project Path="UnityEditor.UI.Analytics.csproj" />
   <Project Path="Unity.XR.Hands.Editor.csproj" />
   <Project Path="HVR.Basis.Comms.HVRUtility.csproj" />
+  <Project Path="Unity.ScriptableBuildPipeline.csproj" />
   <Project Path="Unity.Services.Core.Threading.csproj" />
   <Project Path="BasisShims.csproj" />
+  <Project Path="AudioLink.Editor.csproj" />
   <Project Path="BasisBundleManagement.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
   <Project Path="Unity.Services.CloudDiagnostics.csproj" />
@@ -106,11 +110,11 @@
   <Project Path="BasisPoolTable.csproj" />
   <Project Path="Cilbox.csproj" />
   <Project Path="BasisSeatExamples.csproj" />
-  <Project Path="AudioLink.Editor.csproj" />
   <Project Path="Unity.Profiling.Core.csproj" />
   <Project Path="Unity.Services.Core.Device.csproj" />
   <Project Path="BasisExampleEditor.csproj" />
   <Project Path="Unity.Services.Core.Analytics.csproj" />
+  <Project Path="Prism.Editor.csproj" />
   <Project Path="Unity.EditorCoroutines.Editor.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Runtime.Tests.csproj" />
   <Project Path="SteamAudioUnityEditor.csproj" />
@@ -135,12 +139,13 @@
   <Project Path="Unity.Animation.Rigging.DocCodeExamples.csproj" />
   <Project Path="UnityEngine.XR.LegacyInputHelpers.csproj" />
   <Project Path="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.csproj" />
+  <Project Path="Basis.Media.Runtime.csproj" />
+  <Project Path="Prism.Runtime.Tests.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Shaders.csproj" />
   <Project Path="Unity.RenderPipelines.Core.Runtime.Shared.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.004.csproj" />
   <Project Path="Basis.Zeromessenger.Editor.csproj" />
-  <Project Path="Unity.2D.Sprite.AIIntegration.Editor.csproj" />
   <Project Path="Unity.RenderPipelines.Core.Editor.Shared.csproj" />
   <Project Path="Unity.Services.Core.Networking.csproj" />
   <Project Path="Unity.MemoryProfiler.csproj" />
@@ -148,9 +153,9 @@
   <Project Path="Basis.ZeroMessenger.Samples.csproj" />
   <Project Path="BasisSDKMIrrorEditor.csproj" />
   <Project Path="Unity.XR.OpenXR.TestTooling.csproj" />
+  <Project Path="Prism.UI.csproj" />
   <Project Path="Unity.XR.OpenXR.Features.ConformanceAutomation.csproj" />
   <Project Path="Unity.XR.Hands.Analytics.Hooks.Editor.csproj" />
-  <Project Path="Unity.ScriptableBuildPipeline.csproj" />
   <Project Path="Unity.XR.OpenXR.Features.MockRuntime.csproj" />
   <Project Path="UnityEditor.SpatialTracking.csproj" />
   <Project Path="BasisDebug.csproj" />

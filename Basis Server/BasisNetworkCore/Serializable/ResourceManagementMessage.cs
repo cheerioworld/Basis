@@ -38,6 +38,12 @@ public static partial class SerializableBasis
         public bool ModifyScale;
         //will never remove this item from the server,
         //if off when player count on server is zero it will be removed.
+
+        /// <summary>
+        /// normal users cant remove these items
+        /// never net written just handled by server
+        /// </summary>
+        public bool IsAdminLocked;
         public void Deserialize(NetDataReader Writer)
         {
             Mode = Writer.GetByte();
